@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+@font-face {
+	font-family: 'SDSamliphopangche_Outline';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	color: navy;
+	background-color: silver;
+	font-family: "Nanum Gothic", "SDSamliphopangche_Outline";
+	/*첫번째가 없을 것을 대비해 ,"글꼴"을 덧붙여 대체할 폰트를 적는다*/
+}
+
+p {
+	border: 1px solid blue !important;
+	/*!important: 태그 사용이 겹칠 때 우선순위를 위로 둠*/
+}
+
+p {
+	border: 1px solid black;
+}
+/* 우선순위: inline > id > class > tag */
+#cc {
+	/*아이디 선택자의 우선순위 더 높음*/
+	border: 1px solid purple;
+}
+
+.dd {
+	/*태그보다 클래스 선택자 우선순위 더 높음*/
+	border: 1px solid olive;
+}
+
+h1 {
+	border: 1px solid green;
+}
+
+div.box {
+	border: 1px solid purple;
+	width: 100px;
+	padding: 20px;
+}
+
+div.box:hover {
+	color: red;
+	transform: rotate(70deg);
+}
+
+p {
+	/*font-size: 20px;*/
+	font-size: 1.5em;
+	/*font-weight: bold;*/
+	font-weight: 900;
+	/*color: rgb(0,255,0);*/
+	color: #ff0;
+	text-align: center;
+	line-height:1.5em;
+}
+
+.textdeco {
+	text-decoration: line-through;
+}
+
+.upper {
+	text-transform: uppercase;
+}
+
+.caps {
+	text-transform: capitalize;
+}
+</style>
+</head>
+<body>
+	<h1>
+		@font-face { <span class="upper">font-family:'SDSamliphopangche_Outline';</span> 
+		<span class="caps">src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff')</span>
+		format('woff'); font-weight: normal; font-style: normal; }
+	</h1>
+	<h1 id="cc" class="dd" style="border: 1px solid hotpink !important;">블루베리</h1>
+	<h2>항산화 효능</h2>
+	<p class="aa">
+		블루베리는 <span class="textdeco">과일</span>이다
+	</p>
+	<p id="bb">메사</p>
+
+	<div class="box">마우스오버</div>
+</body>
+</html>

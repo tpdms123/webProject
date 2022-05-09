@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="../css/external.css" rel="stylesheet" type="text/css">
+<style>
+/*internal style sheet*/
+ul {
+	color: blue;
+	list-style: none;
+	border: 1px solid green;
+	padding: 10px;
+}
+
+li {
+	border: 1px solid red;
+	padding: 10px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	font-size: 20px;
+	margin: 10px 20px;
+	border: 1px solid green;
+	padding: 10px 20px;
+}
+
+.aa {
+	background-color: pink;
+}
+
+li.aa {
+	font-size: 30px;
+}
+
+#bb {
+	background-color: #ff0;
+}
+
+#container {
+	border: 5px dotted gray;
+	width: 1000px;
+	height: 800px;
+	margin: 0 auto;
+}
+
+h1, h2 {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<div id="container">
+		<img src="../images/cover.jpg" alt="cover">
+		<h1>커버</h1>
+		<h2>캐릭터</h2>
+		<ul>
+			<!-- inline css -->
+			<li style="color: red;">북</li>
+			<li class="aa">북</li>
+		</ul>
+
+		<h1>블루베리</h1>
+		<h2>항산화 효능</h2>
+		<p class="aa">블루베리는 과일이다</p>
+		<p id="bb">메사</p>
+	</div>
+</body>
+</html>

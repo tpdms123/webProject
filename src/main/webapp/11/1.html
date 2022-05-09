@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+* {
+	border: 1px solid gray;
+	padding: 10px;
+}
+
+div p {
+	background-color: orange;
+}
+/*빈칸: 자손 의미*/
+section p {
+	color: blue;
+}
+/*빈칸: 자식 의미*/
+section>p {
+	font-size: 20px;
+}
+</style>
+<body>
+	<section>
+		<p>11장 선택자 연습</p>
+		<p>11장 선택자 연습</p>
+		<p>11장 선택자 연습</p>
+		<div>
+			<p>section...div..p</p>
+		</div>
+	</section>
+	<p>단독....11장 선택자 연습</p>
+	<div>
+		<p>div...11장 선택자 연습</p>
+	</div>
+</body>
+</html>

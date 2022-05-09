@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function f() {
+		var pw = document.getElementById("common");
+		var com = "1234";
+		if(pw.value != com) {
+			alert("비밀번호를 다시 확인하세요.");
+			pw.focus();
+			return false;
+		}
+		else {
+			alert("확인되었습니다.");
+			}
+	}
+</script>
+</head>
+<body>
+	<h2>환자 정보 입력</h2>
+	<form action="patientResult.jsp" method="post">
+	<table>
+		<tr>
+			<td>공통 비밀번호</td>
+			<td><input type="password" checked="checked" id="common" autofocus="autofocus">
+			<input type="button" onclick="return f();" value="확인" id="btncon"></td>
+		</tr>
+		<tr>
+			<td>환자 코드</td>
+			<td><input type="number" name="patcode" pattern="[0-9]{3}"></td>
+		</tr>
+		<tr>
+			<td>환자 이름</td>
+			<td><input type="text" name="patname"></td>
+		</tr>
+		<tr>
+			<td>주민등록번호</td>
+			<td><input type="text" name="regnum1" pattern="[0-9]{6}">
+			- <input type="text" name="regnum2" pattern="[0-9]{7}"></td>
+		</tr>
+		<tr>
+			<td>성별</td>
+			<td><input type="radio" name="gender" value="남">남 <input type="radio" name="gender" value="여">여</td>
+		</tr>
+		
+		<tr>
+			<td>전화번호</td>
+			<td><input type="tel" name="phone" pattern="[01]{3}[0-9]{3,4}[0-9]{4}"></td>
+		</tr>
+		<tr>
+			<td>주소</td>
+			<td colspan="2"><input type="text" name="address"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="입력"></td>
+		</tr>
+		
+	</table>
+	</form>
+</body>
+</html>
